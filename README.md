@@ -1,2 +1,12 @@
-# vuejsOpenProj
-weather app
+# weather-app
+
+## Project setup
+```
+npm install
+```
+
+### Compiles for development
+```
+npm run serve
+```
+
