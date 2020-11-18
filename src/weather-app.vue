@@ -28,7 +28,7 @@
     max-width="400"
   >
     <v-img
-      class="white--text align-end"
+      class="white--text align-center"
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
@@ -167,7 +167,6 @@ main {
   color: #313131;
   font-size: 20px;
   background: none;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0px 16px 0px 16px;
   transition: 0.4s;
@@ -185,11 +184,7 @@ main {
   text-align: left;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
-.information-box .information{
-  color: #FFF;
-  font-size:32px;
-  text-align: left;
-}
+
 .location-box .date {
   color: #FFF;
   font-size: 20px;
@@ -221,10 +216,6 @@ main {
   color: #818181b6;
   display: block;
   transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
 }
 
 .sidenav .closebtn {
