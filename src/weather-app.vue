@@ -23,6 +23,44 @@
           <div class="weather">{{ weather.weather[0].main }}</div>
         </div> 
   </div>
+ <v-card
+    class="mx-auto"
+    max-width="400"
+  >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    >
+      <v-card-title>Top 10 Attractions</v-card-title>
+    </v-img>
+
+    <v-card-subtitle class="pb-0">
+      Number 10
+    </v-card-subtitle>
+
+    <v-card-text class="text--primary">
+      <div>Whitehaven Beach</div>
+
+      <div>Whitsunday Island, Whitsunday Islands</div>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        color="orange"
+        text
+      >
+        Share
+      </v-btn>
+
+      <v-btn
+        color="orange"
+        text
+      >
+        Explore
+      </v-btn>
+    </v-card-actions>
+  </v-card>
   </main>
   </div>
 </template>
@@ -35,6 +73,7 @@ export default {
       api_key: 'e1e110b082838890ae3b196d86799123',
       url_base: 'https://api.openweathermap.org/data/2.5/',
       query: '',
+      show: true,
       weather: {}
     }
   },
@@ -61,11 +100,13 @@ export default {
       var year = d.getFullYear();
       return `${day} ${date} ${month} ${year}`;
     }
+
   }
 }
 </script>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -95,13 +136,30 @@ main {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
 }
 
-
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
+.v-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  color: #FFF;
+  font-size: 100px;
+  font-weight: 700;
+  text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+  background-color:rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  margin: 30px 0px;
+}
 .search-box {
   width: 50%;
   margin-bottom: 30px;
   text-align: center;
 
 }
+
 .search-box .search-bar {
   display: block;
   width: 85%;
@@ -126,6 +184,11 @@ main {
   font-weight: 500;
   text-align: left;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+}
+.information-box .information{
+  color: #FFF;
+  font-size:32px;
+  text-align: left;
 }
 .location-box .date {
   color: #FFF;

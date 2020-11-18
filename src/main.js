@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './weather-app.vue'
 
-createApp(App).mount('#weather-app')
+Vue.config.productionTip =  false
+
+new Vue({
+    render: h =>h(App),
+}).$mount('#weather-app')
+
+// new Vue({
+//     render: h => h(App),
+// }).$mount('#weather-app')
